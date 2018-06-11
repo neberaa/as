@@ -29,7 +29,7 @@ module.exports = {
       '@': resolve('src'),
     }
   },
-          module: {
+  module: {
               rules: [
                   {
                       test: /\.vue$/,
@@ -42,7 +42,7 @@ module.exports = {
                       include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
                   },
                   {
-                      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                      test: /\.(png|jpe?g|gif)(\?.*)?$/,
                       loader: 'url-loader',
                       options: {
                           limit: 10000,
@@ -50,21 +50,32 @@ module.exports = {
                       }
                   },
                   {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('media/[name].[hash:7].[ext]')
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-        }
-      }
+                      test: /\.s[a|c]ss$/,
+                      loader: 'style!css!sass'
+                  },
+                  {
+                      test: /\.svg(\?.*)?$/,
+                      use: [
+                          'url-loader',
+                          'svg-transform-loader'
+                      ]
+                  },
+                  {
+                    test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000,
+                        name: utils.assetsPath('media/[name].[hash:7].[ext]')
+                    }
+                },
+                  {
+                    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                    loader: 'url-loader',
+                    options: {
+                      limit: 10000,
+                      name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+                    }
+                  }
     ]
   },
   node: {

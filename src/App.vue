@@ -11,18 +11,17 @@ export default {
 }
 </script>
 
-<style>
-@import "./assets/scss/colors.scss";
-@import "./assets/scss/fonts.scss";
-@import "./assets/scss/media.scss";
-@import "./assets/scss/sprite.scss";
-@import "./assets/scss/global.scss";
+<style lang="scss">
+@import "@/assets/scss/colors.scss";
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/media.scss";
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $red;
   margin-top: 60px;
 }
 </style>

@@ -80,7 +80,7 @@
         </a>
       </li>
     </ul>
-      <div class="i-shield"></div>
+      <div class="icon"></div>
   </div>
 </template>
 
@@ -96,7 +96,13 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+@import "@/assets/scss/mixins.scss";
+@import "@/assets/scss/colors.scss";
+
+.icon {
+    @include bg-icon('../assets/img/icons/svg/like.svg', $red);
+}
 
 h1, h2 {
   font-weight: normal;
