@@ -5,11 +5,15 @@ import Dashboard from '@/components/Dashboard'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Dashboard',
-      component: Dashboard
-    }
-  ]
+    routes: [
+        {
+            path: '/main',
+            name: 'Dashboard',
+            component: Dashboard
+        },
+        {
+            path: '*',
+            redirect: '/main'
+        }
+    ]
 })

@@ -1,13 +1,14 @@
 <template>
-    <div class="section">
-        <button class="next" @click="moveSectionDown">Next</button>
-        Main screen
-    </div>
+<main class="section main">
+    <button class="next" @click="moveSectionDown">Next</button>
+    Main screen
+</main>
 </template>
+
 <script>
 import fullPageMixin from 'vue-fullpage.js/src/fullPageMixin'
 export default {
-    name: 'Section1',
+    name: 'Main',
     mixins: [fullPageMixin],
     data() {
         return {
@@ -20,9 +21,17 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/mixins.scss";
 @import "@/assets/scss/colors.scss";
+@import "@/assets/scss/media.scss";
 
 .section {
     width: 100%;
     height: 100vh;
 }
+
+.main {
+    background: url("../assets/img/header-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+
 </style>

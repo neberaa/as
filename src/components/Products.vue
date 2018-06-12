@@ -1,12 +1,12 @@
 <template>
-    <div class="section">
-        Products
-    </div>
+<div class="section products">
+    Products
+</div>
 </template>
 <script>
 import fullPageMixin from 'vue-fullpage.js/src/fullPageMixin'
 export default {
-    name: 'Section1',
+    name: 'Products',
     mixins: [fullPageMixin],
     data() {
         return {
