@@ -2,3 +2,9 @@
   $base-color: str-slice(inspect($color), 2);
   background-image: unquote('url("' + $url + "?fill=%23" + $base-color +'")');
 }
+// Example of using
+//.icon {
+//  @include bg-icon('../assets/img/icons/svg/like.svg', $dark-grey);
+//  width: 30px;
+//  height: 30px;
+//}
