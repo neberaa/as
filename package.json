@@ -10,7 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "animate.css": "^3.6.1",
     "fullpage.js": "^2.9.7",
+    "hamburgers": "^0.9.3",
     "jquery": "^3.3.1",
     "svg-transform-loader": "^1.0.0",
     "vue": "^2.5.2",

@@ -4,6 +4,9 @@
     <full-page :options="options">
         <main-screen></main-screen>
         <products></products>
+        <about></about>
+        <promo></promo>
+        <directions></directions>
     </full-page>
 </div>
 </template>
@@ -14,23 +17,23 @@ import fullPageMixin from 'vue-fullpage.js/src/fullPageMixin'
 import MainScreen from '@/components/MainScreen'
 import Products from '@/components/Products'
 import Navigation from '@/components/Navigation'
+import About from '@/components/About'
+import Promo from '@/components/Promo'
+import Directions from '@/components/Directions'
 
 export default {
     name: 'Dashboard',
     mixins: [fullPageMixin],
     components: {
-        FullPage,
-        MainScreen,
-        Products,
-        Navigation
+        FullPage, MainScreen, Products, Navigation, About, Promo, Directions
     },
     data() {
         return {
             options: {
                 navigation: true,
-                navigationTooltips: ['Main', 'Our products'],
+                navigationTooltips: ['Главная', 'Каталог', 'О нас', 'Акции', 'Направления'],
                 menu: '#navigation',
-                anchors: ['main', 'products'],
+                anchors: ['main', 'products', 'about', 'promo', 'directions'],
                 showActiveTooltip: true,
                 scrollingSpeed: 1000
             },

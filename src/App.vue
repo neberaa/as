@@ -19,11 +19,15 @@ export default {
 @import "@/assets/scss/mixins.scss";
 @import "@/assets/scss/media.scss";
 
+* {
+  box-sizing: border-box;
+}
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'GothamPro', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: $red;
+    color: $dark-grey;
+    font-size: 16px;
 }
 </style>

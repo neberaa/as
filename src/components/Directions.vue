@@ -1,12 +1,12 @@
 <template>
-<div class="section products">
-    Products
+<div class="section directions">
+    Directions
 </div>
 </template>
 <script>
 import fullPageMixin from 'vue-fullpage.js/src/fullPageMixin'
 export default {
-    name: 'Products',
+    name: 'Directions',
     mixins: [fullPageMixin],
     data() {
         return {
@@ -23,6 +23,6 @@ export default {
 .section {
     width: 100%;
     height: 100vh;
-    background-color: grey;
+    background-color: lightblue;
 }
 </style>

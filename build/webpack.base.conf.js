@@ -17,7 +17,9 @@ module.exports = {
         app: './src/main.js',
 
         'styles': [
-          './node_modules/fullpage.js/dist/jquery.fullpage.css'
+          './node_modules/fullpage.js/dist/jquery.fullpage.css',
+          './node_modules/hamburgers/dist/hamburgers.css',
+          './node_modules/animate.css/animate.min.css'
         ]
     },
     output: {
