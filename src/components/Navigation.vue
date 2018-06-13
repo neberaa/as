@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import WOW from 'wowjs';
 export default {
     name: 'Navigation',
     data() {
@@ -44,22 +45,21 @@ export default {
         }
     },
     mounted() {
-      fadeInListDelay();
+        fadeInListDelay();
+        new WOW.WOW().init();
     },
     methods: {
         goToSlide(i) {
             $.fn.fullpage.moveTo(i, 0);
-            if(this.IS_MOBILE) {
+            if (this.IS_MOBILE) {
                 this.showOverlay = false;
             }
         }
     }
 }
 
-
 function fadeInListDelay() {
     let list = $('.navigation-list').find('li');
-    let dotsNav = $('#fp-nav');
 
     list.each(function(i,e) {
       $(e).css('animation-delay', `${500*i}ms`)
@@ -74,6 +74,8 @@ function fadeInListDelay() {
 @import "@/assets/scss/fonts.scss";
 @import "@/assets/scss/mixins.scss";
 @import "@/assets/scss/media.scss";
+
+.wow { visibility: hidden; }
 
 ul {
     list-style: none;
