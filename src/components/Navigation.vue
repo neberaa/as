@@ -27,13 +27,13 @@
                 <li data-menuanchor="directions" :class="{'animated fadeInDown': showOverlay}"><a href="#directions" @click.prevent="goToSlide(5)">Направления</a></li>
             </ul>
         </div>
-
     </section>
 </nav>
 </template>
 
 <script>
-import WOW from 'wowjs';
+import WOW from 'wowjs'
+
 export default {
     name: 'Navigation',
     data() {

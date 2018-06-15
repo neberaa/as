@@ -1,6 +1,6 @@
 <template>
 <div class="wrapper">
-    <navigation></navigation>
+    <navigation :class="{'short': hideNavBar}"></navigation>
     <full-page :options="options">
         <main-screen></main-screen>
         <products></products>
@@ -30,18 +30,24 @@ export default {
     data() {
         return {
             options: {
-                navigation: true,
+                navigation: false,
                 navigationTooltips: ['Главная', 'Каталог', 'О нас', 'Акции', 'Направления'],
                 menu: '#navigation',
                 anchors: ['main', 'products', 'about', 'promo', 'directions'],
-                showActiveTooltip: true,
-                scrollingSpeed: 1000
+                showActiveTooltip: false,
+                scrollingSpeed: 1000,
+                onLeave: this.onLeave
             },
+            hideNavBar: false
         }
     },
     methods: {
-        goToSlide(i) {
-            $.fn.fullpage.moveTo(i, 0);
+        onLeave(index, slideIndex, direction) {
+            if (index == 1 && slideIndex == 2 && direction == 'down'){
+                this.hideNavBar = true;
+            } if (index == 2 && slideIndex == 1 && direction == 'up') {
+                this.hideNavBar = false;
+            }
         }
     }
 }

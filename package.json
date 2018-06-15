@@ -14,6 +14,7 @@
     "fullpage.js": "^2.9.7",
     "hamburgers": "^0.9.3",
     "jquery": "^3.3.1",
+    "jquery-parallax.js": "^1.5.0",
     "svg-transform-loader": "^1.0.0",
     "vue": "^2.5.2",
     "vue-fullpage.js": "0.0.1",
